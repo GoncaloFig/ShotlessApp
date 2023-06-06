@@ -18,7 +18,7 @@ Shotless is a fun and handy app designed to help you make decisions in a playful
 
 ## Link for the browser
 
-### https://shotless2022.netlify.app/
+### https://shotlessappgame.netlify.app/
 
 
 
