@@ -20,7 +20,13 @@ const Players = ({openEditPlayers, allPlayers}) => {
         <div className="playersListContainer">
             <div className="playersListOverflow">
                 {/* <PlayerBtn/> */}
-                {handleLoadPlayers}
+                {allPlayers.length > 0 ? (
+                    handleLoadPlayers
+                ) : (
+                <div className="noPlayersDiv">
+                    <p>You need to add some players</p>
+                </div>
+                )}
             </div>
         </div>
         <div className="addPlayerContainer">
