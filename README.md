@@ -16,6 +16,6 @@ Shotless is a fun and handy app designed to help you make decisions in a playful
 * Shotless will instantly generate a random person from the entered names.
 * Enjoy the moment and let Shotless add some fun to your decision-making process.
 
-## Link for browser
+## Link for the browser
 
 ### https://shotless2022.netlify.app/
