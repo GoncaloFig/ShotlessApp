@@ -54,21 +54,31 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList}) => {
 
     const handleKeyDownEnter = event => {
 
-    if (event.key === 'Enter') {
-        // debugger;
+        if (event.key === 'Enter') {
+            // debugger;
+            event.preventDefault();
+            const randId = 100 + Math.random() * (100000 - 100);
+            let newPlayerObj = {'id': randId , 'name': playerNameInput};
+            // allPlayers.changePlayersList({
+            //     allPlayers: [...this.state.allPlayers, newPlayerObj]
+            // });
+            const newPlayersList = [...allPlayers];
+            newPlayersList.push(newPlayerObj);
+            changePlayersList(newPlayersList);
+            setPlayerNameInput(''); // Clear the input field
+            
+        }
+    };
+
+    const handleSavePLayersBtn = event => {
         event.preventDefault();
         const randId = 100 + Math.random() * (100000 - 100);
         let newPlayerObj = {'id': randId , 'name': playerNameInput};
-        // allPlayers.changePlayersList({
-        //     allPlayers: [...this.state.allPlayers, newPlayerObj]
-        // });
         const newPlayersList = [...allPlayers];
         newPlayersList.push(newPlayerObj);
         changePlayersList(newPlayersList);
         setPlayerNameInput(''); // Clear the input field
-        
     }
-    };
 
     return (
     <div className="playersEditContainer">
@@ -80,6 +90,7 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList}) => {
                     <h3 className='newPlayerTitle'>New Player</h3>
                 <div className='playersNewInputContainer'>
                     <input type="text" value={playerNameInput} onKeyDown={handleKeyDownEnter} onChange={handleChangePlayerName}/>
+                    <button className='savaPlayerBtn' onClick={handleSavePLayersBtn}>Save</button>
                 </div>
             </div>
         </div>
