@@ -57,7 +57,8 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList}) => {
     if (event.key === 'Enter') {
         // debugger;
         event.preventDefault();
-        let newPlayerObj = {'id': 1000 , 'name': playerNameInput};
+        const randId = 100 + Math.random() * (100000 - 100);
+        let newPlayerObj = {'id': randId , 'name': playerNameInput};
         // allPlayers.changePlayersList({
         //     allPlayers: [...this.state.allPlayers, newPlayerObj]
         // });
