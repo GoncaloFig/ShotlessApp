@@ -1,0 +1,32 @@
+/* 2532x1170 pixels at 460ppi */
+/* @media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) {  */
+        
+@media only screen and (min-width: 390px) {
+
+    .playerBtn{
+        background: #EAE9EC;
+        border: 3px solid #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        width: 332px;
+        height: 70px;
+        font-weight: 653;
+        font-size: 32px;
+        color: #FFFFFF;
+        font-variation-settings: 'slnt' 0;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 0 0 30px 0;
+
+        color: #454545;
+        font-variation-settings: 'slnt' 0;
+
+        background: url('../Components/Images/playerBanner.png');
+        background-size:     cover;                      /* <------ */
+        background-repeat:   no-repeat;
+        background-position: center center;
+    }
+
+}

@@ -1,0 +1,113 @@
+/* 2532x1170 pixels at 460ppi */
+// @media only screen 
+//     and (device-width: 390px) 
+//     and (device-height: 844px) 
+//     and (-webkit-device-pixel-ratio: 3) { 
+
+@media only screen and (min-width: 390px) {
+
+    .playersEditContainer { 
+        height: 494px;
+        background: #FFFFFF;
+        border-radius: 23px 23px 0px 0px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 17% 67% 22%;
+        position: relative;
+    }
+
+    .playersEditListContainer{
+        background-color: transparent;
+        padding: 25px 10px 15px 10px;
+        display: grid;
+        // box-shadow: rgb(100 100 111 / 10%) 0px 3px 11px 0px;
+        box-shadow: 0px 3px 11px 0px rgba(100, 100, 111, .1);
+    }
+
+    .playersEditListOverflow{
+        background-color: transparent;
+        overflow: scroll;
+        padding: 0 14px;
+    }
+
+    .editPlayerContainer{
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .editPlayerBtn{
+        background: #3D99FE;;
+        border: 3px solid #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        width: 341px;
+        height: 72px;
+        font-weight: 653;
+        font-size: 48px;
+        color: #FFFFFF;
+        font-variation-settings: 'slnt' 0;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .editPlayersTitle{
+        display: flex;
+        justify-content: center;
+    }
+
+    .playersInputContainer{
+
+        display: grid;
+        grid-template-columns: 86% 14%;
+        justify-items: center;
+        align-items: center;
+        margin: 0px 0px 13px 0px;
+
+        input{
+            width: 90%;
+            padding: 11px 7px;
+            border-radius: 10px;
+            border: 2px solid #c4c4c5;
+            font-size: 20px;
+        }
+    }
+
+    .playersNewInputContainer{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        margin: 0px 0px 13px 0px;
+
+        input{
+            width: 90%;
+            padding: 11px 7px;
+            border-radius: 10px;
+            border: 2px solid #c4c4c5;
+            font-size: 20px;
+        }
+    }
+
+    .deletePlayerIcon{
+        font-size: x-large;
+        padding: 6px;
+        border: 2px solid;
+        border-radius: 10px;
+        color: #bb0a0a8c;
+    }
+
+    .goBackFromPlayers{
+        position: absolute;
+        left: 5%;
+        top: 7%;
+        font-size: 20px;
+    }
+
+    .newPlayerTitle{
+        text-align: center;
+    }
+
+}
