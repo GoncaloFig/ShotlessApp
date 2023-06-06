@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import "./Players.css";
+import "./Style/Players.css";
 import { FaPlus } from "react-icons/fa";
 import WinnerBanner from './WinnerBanner';
 import PlayerBtn from './PlayerBtn'

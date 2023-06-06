@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import './SpinPrizeDraw.scss'
+import './Style/SpinPrizeDraw.scss'
 
-const SpinPrizeDraw = ({props, shotlessLoser}) => {
+const SpinPrizeDraw = ({props, shotlessLoser, isVisibleSpin}) => {
 
     const [showText, setShowText] = useState(false);
 
@@ -16,11 +16,12 @@ const SpinPrizeDraw = ({props, shotlessLoser}) => {
 
     //This is not working right now
     const handleClickRunDrawAgain = () => {
-
+        isVisibleSpin(true)
+        console.log("visibleSpin");
     };
 
     return (
-        <div className="demo">
+        <div className="demo" onClick={handleClickRunDrawAgain}>
             <div className="demo__colored-blocks">
                 <div className="demo__colored-blocks-rotater">
                     <div className="demo__colored-block"></div>
@@ -29,7 +30,7 @@ const SpinPrizeDraw = ({props, shotlessLoser}) => {
                 </div>
                 <div className="demo__colored-blocks-inner"></div>
                 {/* <div className="demo__text">{shotlessLoser.name}</div> */}
-                <div className="demo__text" onClick={handleClickRunDrawAgain}>
+                <div className="demo__text" >
                     {showText ? shotlessLoser.name : "GO"}
                 </div>
             </div>

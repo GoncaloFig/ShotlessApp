@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import "./EditPlayers.scss";
+import "./Style/EditPlayers.scss";
 import { FaCheck } from "react-icons/fa";
 import { ImCross, ImArrowLeft2 } from "react-icons/im";
 import PlayerBtn from './PlayerBtn'

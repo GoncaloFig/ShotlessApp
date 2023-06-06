@@ -5,7 +5,7 @@ import EditPlayers from './EditPlayers';
 import SpinPrizeDraw from './SpinPrizeDraw';
 import { HiOutlineClock } from "react-icons/hi";
 
-import "./Game.css";
+import "./Style/Game.css";
 
 
 

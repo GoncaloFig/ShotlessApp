@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import './Spin.scss'
+import './Style/Spin.scss'
 import SpinPrizeDraw from "./SpinPrizeDraw";
 import WinnerBanner from "./WinnerBanner";
 import $ from 'jquery';
@@ -59,9 +59,9 @@ const Spin = ({ allPlayers, setShotlessLoser, shotlessLoser}) => {
     handleClick();
   }
 
-  const handleSpinPrizeDrawClickAgain = () => {
-    setVisibleSpin(true);
-    //console.log("teste");
+  function handleSpinPrizeDrawClickAgain() {
+    //setVisibleSpin((prev) => !prev)
+    console.log("visibleSpin");
   };
 
   const removeSpin = () => {
@@ -92,7 +92,7 @@ const Spin = ({ allPlayers, setShotlessLoser, shotlessLoser}) => {
   return (
     <div className="gameButtonContainer">
         
-        {visibleSpin ? ( <button className={`spinButton ${fadeProp.fadeGo}`} onClick={() => { removeSpin(); shotlessResultFunction2()}}>GO</button> ) : <SpinPrizeDraw shotlessLoser={shotlessLoser} onClick={handleSpinPrizeDrawClickAgain}/>}
+        {visibleSpin ? ( <button className={`spinButton ${fadeProp.fadeGo}`} onClick={() => { removeSpin(); shotlessResultFunction2()}}>GO</button> ) : <SpinPrizeDraw shotlessLoser={shotlessLoser} isVisibleSpin={setVisibleSpin} onClick={handleSpinPrizeDrawClickAgain}/>}
         
         {/* {visibleSpin && (
           <button className={`spinButton ${fadeProp.fadeGo}`} onClick={handleClick}>
