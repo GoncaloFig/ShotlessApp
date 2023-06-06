@@ -4,9 +4,9 @@ Shotless is a fun and handy app designed to help you make decisions in a playful
 
 ## Features
 
-* Random Selection: Input names of friends, colleagues, or any desired options, and Shotless will randomly select one for you.
-* Quick and Easy: With just a few taps, Shotless instantly provides a fair and entertaining solution to decision-making.
-* Versatile Use: Shotless can be used in various scenarios, such as choosing a game player, deciding who goes first, or determining any random selection need.
+* **Random Selection:** Input names of friends, colleagues, or any desired options, and Shotless will randomly select one for you.
+* **Quick and Easy:** With just a few taps, Shotless instantly provides a fair and entertaining solution to decision-making.
+* **Versatile Use:** Shotless can be used in various scenarios, such as choosing a game player, deciding who goes first, or determining any random selection need.
 
 
 # Getting Started with Create React App
