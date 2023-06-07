@@ -81,9 +81,10 @@ const Spin = ({ allPlayers, setShotlessLoser, shotlessLoser}) => {
     // setFadeProp({
     //   fadeGo: 'fadeOut'
     // })
+
     setTimeout(function() {
       setVisibleSpin((prev) => !prev)
-    }, 1000);
+    }, 1); //Just because
 
     // {shotlessResultFunction};
   };
