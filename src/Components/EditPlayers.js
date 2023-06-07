@@ -56,28 +56,31 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList}) => {
 
         if (event.key === 'Enter') {
             // debugger;
-            event.preventDefault();
-            const randId = 100 + Math.random() * (100000 - 100);
-            let newPlayerObj = {'id': randId , 'name': playerNameInput};
-            // allPlayers.changePlayersList({
-            //     allPlayers: [...this.state.allPlayers, newPlayerObj]
-            // });
-            const newPlayersList = [...allPlayers];
-            newPlayersList.push(newPlayerObj);
-            changePlayersList(newPlayersList);
-            setPlayerNameInput(''); // Clear the input field
-            
+            if(playerNameInput.length > 0){
+                event.preventDefault();
+                const randId = 100 + Math.random() * (100000 - 100);
+                let newPlayerObj = {'id': randId , 'name': playerNameInput};
+                // allPlayers.changePlayersList({
+                //     allPlayers: [...this.state.allPlayers, newPlayerObj]
+                // });
+                const newPlayersList = [...allPlayers];
+                newPlayersList.push(newPlayerObj);
+                changePlayersList(newPlayersList);
+                setPlayerNameInput(''); // Clear the input field
+            }
         }
     };
 
     const handleSavePLayersBtn = event => {
-        event.preventDefault();
-        const randId = 100 + Math.random() * (100000 - 100);
-        let newPlayerObj = {'id': randId , 'name': playerNameInput};
-        const newPlayersList = [...allPlayers];
-        newPlayersList.push(newPlayerObj);
-        changePlayersList(newPlayersList);
-        setPlayerNameInput(''); // Clear the input field
+        if(playerNameInput.length > 0){
+            event.preventDefault();
+            const randId = 100 + Math.random() * (100000 - 100);
+            let newPlayerObj = {'id': randId , 'name': playerNameInput};
+            const newPlayersList = [...allPlayers];
+            newPlayersList.push(newPlayerObj);
+            changePlayersList(newPlayersList);
+            setPlayerNameInput(''); // Clear the input field
+        }
     }
 
     return (
@@ -89,7 +92,7 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList}) => {
                 {handleLoadPlayersInputs}
                     <h3 className='newPlayerTitle'>New Player</h3>
                 <div className='playersNewInputContainer'>
-                    <input type="text" value={playerNameInput} onKeyDown={handleKeyDownEnter} onChange={handleChangePlayerName}/>
+                    <input type="text" maxlength="8" value={playerNameInput} onKeyDown={handleKeyDownEnter} onChange={handleChangePlayerName}/>
                     <button className='savaPlayerBtn' onClick={handleSavePLayersBtn}>Save</button>
                 </div>
             </div>
