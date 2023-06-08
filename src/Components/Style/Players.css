@@ -4,10 +4,10 @@
     and (device-height: 844px) 
     and (-webkit-device-pixel-ratio: 3) {  */
 
-@media only screen and (min-width: 390px) {
+@media only screen and (min-width: 340px) {
 
     .playersContainer { 
-        height: 494px;
+        height: 58vh;
         background: #FFFFFF;
         border-radius: 23px 23px 0px 0px;
         display: grid;

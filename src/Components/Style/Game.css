@@ -6,7 +6,7 @@
     and (device-height: 844px) 
     and (-webkit-device-pixel-ratio: 3) {  */
 
-@media only screen and (min-width: 390px) {
+@media only screen and (min-width: 340px) {
 
 .game{
     position: relative;
@@ -17,7 +17,7 @@
 }
 
 .gameHeaderContainer { 
-    height: 320px;
+    height: 38vh;
     display: grid;
 }
 
