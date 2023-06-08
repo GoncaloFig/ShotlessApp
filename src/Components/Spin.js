@@ -4,9 +4,9 @@ import SpinPrizeDraw from "./SpinPrizeDraw";
 import WinnerBanner from "./WinnerBanner";
 import $ from 'jquery';
 
-const Spin = ({ allPlayers, setShotlessLoser, shotlessLoser}) => {
+const Spin = ({ props, allPlayers, setShotlessLoser, shotlessLoser, visibleSpin, setVisibleSpin}) => {
 
-  const [visibleSpin, setVisibleSpin] = useState(true);
+  //const [visibleSpin, setVisibleSpin] = useState(true);
 
   const [fadeProp, setFadeProp] = useState({
     fadeIn: 'fadeIn',
@@ -81,7 +81,7 @@ const Spin = ({ allPlayers, setShotlessLoser, shotlessLoser}) => {
     // setFadeProp({
     //   fadeGo: 'fadeOut'
     // })
-
+    
     setTimeout(function() {
       setVisibleSpin((prev) => !prev)
     }, 1); //Just because

@@ -6,7 +6,7 @@ import PlayerBtn from './PlayerBtn'
 
 // import { FaBeer } from 'react-icons/fa';
 
-const Players = ({openEditPlayers, allPlayers, changePlayersList}) => {
+const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin}) => {
 
     const [playerButton,setPlayerButton] = useState([<PlayerBtn key={0} />]);
 
@@ -67,6 +67,8 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList}) => {
                 newPlayersList.push(newPlayerObj);
                 changePlayersList(newPlayersList);
                 setPlayerNameInput(''); // Clear the input field
+
+                setVisibleSpin(true);
             }
         }
     };
@@ -80,6 +82,8 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList}) => {
             newPlayersList.push(newPlayerObj);
             changePlayersList(newPlayersList);
             setPlayerNameInput(''); // Clear the input field
+
+            setVisibleSpin(true);
         }
     }
 

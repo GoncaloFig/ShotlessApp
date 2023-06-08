@@ -14,6 +14,9 @@ const GamePage = (props) => {
   // Open and close edit players
   const [visibleEditPlayers, setVisibleEditPlayers] = useState(false);
 
+  //Shows and hides "GO" button
+  const [visibleSpin, setVisibleSpin] = useState(true);
+
   const openEditPlayers = () => {
     setVisibleEditPlayers((prev) => !prev);
   }
@@ -50,14 +53,14 @@ const GamePage = (props) => {
       <HiOutlineClock className="historyIcon"/>
       <h1 className="shotlessTitle">Shotless</h1>
       <div className="gameHeaderContainer">
-        <Spin allPlayers={playersList} setShotlessLoser={setShotlessLoser} shotlessLoser={shotlessLoser}/>
+        <Spin allPlayers={playersList} setShotlessLoser={setShotlessLoser} shotlessLoser={shotlessLoser} setVisibleSpin={setVisibleSpin} visibleSpin={visibleSpin}/>
       </div>
       
       {/* {visibleEditPlayers &&
         <EditPlayers/>
       } */}
 
-      {visibleEditPlayers ? ( <EditPlayers openEditPlayers={openEditPlayers} allPlayers={playersList} changePlayersList={setPlayersList}/> ) : <Players openEditPlayers={openEditPlayers} allPlayers={playersList}/>}
+      {visibleEditPlayers ? ( <EditPlayers openEditPlayers={openEditPlayers} allPlayers={playersList} changePlayersList={setPlayersList} setVisibleSpin={setVisibleSpin}/> ) : <Players openEditPlayers={openEditPlayers} allPlayers={playersList}/>}
       {/* <Players/> */}
       {/* <EditPlayers/> */}
     </div>
