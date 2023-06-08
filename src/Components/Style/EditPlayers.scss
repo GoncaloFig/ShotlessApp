@@ -4,7 +4,7 @@
 //     and (device-height: 844px) 
 //     and (-webkit-device-pixel-ratio: 3) { 
 
-@media only screen and (min-width: 340px) {
+@media (min-width: 1170px) {
 
     .playersEditContainer { 
         height: 494px;
@@ -133,7 +133,7 @@
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1170px) {
     /* CSS styles specific to cell phones */
     /* Add your styles here */
 
