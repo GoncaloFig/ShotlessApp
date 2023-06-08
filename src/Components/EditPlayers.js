@@ -97,7 +97,7 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin
                     <h3 className='newPlayerTitle'>New Player</h3>
                 <div className='playersNewInputContainer'>
                     <input type="text" maxlength="8" value={playerNameInput} onKeyDown={handleKeyDownEnter} onChange={handleChangePlayerName}/>
-                    <button className='savaPlayerBtn' onClick={handleSavePLayersBtn}>Save</button>
+                    <button className='savaPlayerBtn' onClick={handleSavePLayersBtn}>Add</button>
                 </div>
             </div>
         </div>
