@@ -19,6 +19,7 @@ const GamePage = (props) => {
 
   const openEditPlayers = () => {
     setVisibleEditPlayers((prev) => !prev);
+    setVisibleSpin(true);
   }
 
   // PLAYERS ARRAY
