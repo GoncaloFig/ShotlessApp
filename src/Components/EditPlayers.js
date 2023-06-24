@@ -22,6 +22,17 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin
     
     };
 
+    const handleChangePlayerName2 = event => {        
+
+        let newPlayerObj = {'id': 1 , 'name': event.target.value};
+        // const newPlayersList = [...allPlayers];
+        // newPlayersList.push(newPlayerObj);
+        // changePlayersList(newPlayersList);
+        // console.log(allPlayers);
+        allPlayers[0] = {'id': 1 , 'name': event.target.value};
+        console.log();
+    };
+
     // let handleAddPlayer = (e) => {
     //     e.preventDefault()
     //     setPlayerButton([...playerButton,<PlayerBtn key={playerButton.length} />]);
@@ -34,7 +45,7 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin
 
     //DELETE PLAYER FROM LIST
     const deletePlayerFromList = (event, key) => {
-        // let element = event.target.options.selectedIndex;
+        // let element = event.targhggggggget.options.selectedIndex;
         console.log(key);
         changePlayersList(current =>
             current.filter(player => {
@@ -44,10 +55,12 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin
         console.log(allPlayers);
     }
 
+    console.log(allPlayers);
+
     // LOAD PLAYERS LIST INPUTS BOX'S
     const handleLoadPlayersInputs = allPlayers.map((playerItem, index) =>
         <div className='playersInputContainer'>
-            <input type="text" data-key={playerItem.id} value={playerItem.name}/>
+            <input type="text" data-key={playerItem.id} defaultValue={playerItem.name} onChange={handleChangePlayerName2} />
             <ImCross className='deletePlayerIcon' data-key={playerItem.id} onClick={event => deletePlayerFromList(event, playerItem.id)}/>
         </div>
     );
@@ -97,6 +110,7 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin
                     <h3 className='newPlayerTitle'>New Player</h3>
                 <div className='playersNewInputContainer'>
                     <input type="text" maxlength="8" value={playerNameInput} onKeyDown={handleKeyDownEnter} onChange={handleChangePlayerName}/>
+                    
                     <button className='savaPlayerBtn' onClick={handleSavePLayersBtn}>Add</button>
                 </div>
             </div>
