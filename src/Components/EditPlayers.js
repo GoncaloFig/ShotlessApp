@@ -22,15 +22,24 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin
     
     };
 
-    const handleChangePlayerName2 = event => {        
+    const handleChangePlayerNameList = event => {        
 
-        let newPlayerObj = {'id': 1 , 'name': event.target.value};
+        //let newPlayerObj = {'id': 1 , 'name': event.target.value};
+        const id = event.target.getAttribute('data-key')
+        let newList = allPlayers.find((elem, index) => {
+            //console.log(elem.id == id);
+            if(elem.id == id){
+                console.log("Entrei");
+                //elem.name = event.target.value
+                allPlayers[index] = {id: id , name: event.target.value};
+            }
+            //return elem.id === id;
+        })
         // const newPlayersList = [...allPlayers];
-        // newPlayersList.push(newPlayerObj);
-        // changePlayersList(newPlayersList);
-        // console.log(allPlayers);
-        allPlayers[0] = {'id': 1 , 'name': event.target.value};
-        console.log();
+
+        //allPlayers[0] = {'id': 1 , 'name': event.target.value};
+        console.log(id);
+        console.log(allPlayers);
     };
 
     // let handleAddPlayer = (e) => {
@@ -60,7 +69,7 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin
     // LOAD PLAYERS LIST INPUTS BOX'S
     const handleLoadPlayersInputs = allPlayers.map((playerItem, index) =>
         <div className='playersInputContainer'>
-            <input type="text" data-key={playerItem.id} defaultValue={playerItem.name} onChange={handleChangePlayerName2} />
+            <input type="text" data-key={playerItem.id} defaultValue={playerItem.name} onChange={handleChangePlayerNameList} />
             <ImCross className='deletePlayerIcon' data-key={playerItem.id} onClick={event => deletePlayerFromList(event, playerItem.id)}/>
         </div>
     );
