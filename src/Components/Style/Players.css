@@ -12,7 +12,7 @@
         border-radius: 23px 23px 0px 0px;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 85% 20%;
+        grid-template-rows: 80% 20%;
     }
 
     .playersListContainer{
