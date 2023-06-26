@@ -7,7 +7,7 @@
 @media only screen and (min-width: 340px) {
 
     .playersContainer { 
-        height: 58vh;
+        height: 52vh;
         background: #FFFFFF;
         border-radius: 23px 23px 0px 0px;
         display: grid;
