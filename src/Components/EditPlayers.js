@@ -15,11 +15,14 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin
 
     // PLAYER NAME FROM INPUT
     const [playerNameInput, setPlayerNameInput] = useState('');
+    const [playerNameInputEnable, setPlayerNameInputEnable] = useState(false);
 
     //HANDLE CHANGE NEW PLAYER INPUT
     const handleChangePlayerName = event => {
+        if(event.target.value.length > 0 ?  setPlayerNameInputEnable(true) : setPlayerNameInputEnable(false));
         setPlayerNameInput(event.target.value);
-    
+        console.log("playerNameInputEnable", playerNameInputEnable);
+        console.log("playerNameInput", playerNameInput);
     };
 
     const handleChangePlayerNameList = event => {        
@@ -120,7 +123,7 @@ const Players = ({openEditPlayers, allPlayers, changePlayersList, setVisibleSpin
                 <div className='playersNewInputContainer'>
                     <input type="text" maxlength="8" value={playerNameInput} onKeyDown={handleKeyDownEnter} onChange={handleChangePlayerName}/>
                     
-                    <button className='savaPlayerBtn' onClick={handleSavePLayersBtn}>Add</button>
+                    <button className={`${playerNameInputEnable ? ('savaPlayerBtn') : 'savaPlayerBtn disabledButton'} `} onClick={handleSavePLayersBtn} >Add</button>
                 </div>
             </div>
         </div>
