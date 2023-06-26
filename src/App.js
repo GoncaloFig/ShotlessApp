@@ -5,8 +5,6 @@ import { CookieBanner } from '@keepist/react-gdpr-cookie-banner';
 
 function App() {
 
-  document.documentElement.requestFullscreen();
-
   return (
     <div>
       <CookieBanner
