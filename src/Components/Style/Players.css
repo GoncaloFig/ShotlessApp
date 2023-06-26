@@ -25,7 +25,7 @@
         grid-template-columns: auto;
         /* grid-template-rows: 25%; */
 
-        box-shadow: rgb(100 100 111 / 10%) 0px 3px 11px 0px;
+        /* box-shadow: rgb(100 100 111 / 10%) 0px 3px 11px 0px; */
 
         display: grid;
         grid-template-columns: auto;
@@ -69,9 +69,9 @@
         background-color: transparent;
         overflow: scroll;
         grid-auto-rows: 25%;
-        justify-content: center;
-        display: grid;
-        padding: 0 14px;
+        /* justify-content: center; */
+        display: flex;
+        flex-direction: column;
     }
 
     .noPlayersDiv{
